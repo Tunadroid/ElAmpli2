@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--jquery para la poner querys -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!--CSS el de nosotros-->
+    <link rel="stylesheet" href="/registrarusuario/static/css/stili_login.css">
+    <link rel="stylesheet" href="/registrarusuario/static/css/indexStyle.css">
+    <title>Formulario-Login</title>
+</head>
+
+<body>
+    <div class="navLogin">
+        <nav class="menu">
+
+            <div class="logo">
+                <img id="icono" src="/img/el_ampli_chico.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="/index.html" style="color:white">INICIO </a></li>
+                <li><a href="/paginas/login.html" style="color:white">REGISTRO</a></li>
+                <li><a href="/paginas/pagina_almacen.html" style="color:white">ALMACEN</a></li>
+                <li><a href="/index.html#bloque_1" style="color:white">NOSOTROS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="titulos">
+        <H1>Registrate es gratis</H1>
+        <h2>y obtendras descuentos todos los dias</h2>
+    </div>
+    <div class="logeo">
+        <!--formulario-->
+        <form action="#" method="post" id="login_1">
+            <table class="table">
+                <tr>
+                    <td><label>Rut</label></td>
+                    <td>
+                        <input type="text" pattern="^[0-9]*$" id="rut" name="rut" required oninput="checkRut(this)">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Nombres </label></td>
+                    <td><input type="text" name="txtNombre" id="nombre"></td>
+                </tr>
+                <tr>
+                    <td><label> Apellidos </label></td>
+                    <td><input type="text" name="txtApellido" id="apellido"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Fecha de nacimiento </label>
+                    </td>
+                    <td>
+                        <input type="date" name="fecha" id="fecha">
+                    </td>
+                </tr>
+                <tr>
+                    <td><select id="regiones"></select></td>
+                    <td><select id="comunas"></select></td>
+                </tr>
+                <tr>
+                    <td><label>Email </label></td>
+                    <td><input type="email" name="txtEmail" id="txtEmail"></td>
+                </tr>
+                <tr>
+                    <td><label>Contraseña</label></td>
+                    <td><input type="password" name="txtPassword" id="txtPassword"></td>
+                </tr>
+                <tr>
+                    <td><label>Repita Contraseña</label></td>
+                    <td><input type="password" name="txtRpassword" id="txtRpassword"></td>
+                </tr>
+
+            </table>
+            <button type="submit" class="btn btn-primary"> Crear Usuario </button>
+        </form>
+    </div>
+    <!--fin formulario-->
+    <!-- ahi dice gratis..aqui va el hijo de java  Json XD -->
+    <script src="/js/validador.js"></script>
+    <script src="/js/validarRUT.js"></script>
+
+
+
+
+</body>
+
+</html>
