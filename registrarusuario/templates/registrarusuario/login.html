@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,8 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <!--CSS el de nosotros-->
-    <link rel="stylesheet" href="/registrarusuario/static/css/stili_login.css">
-    <link rel="stylesheet" href="/registrarusuario/static/css/indexStyle.css">
+   <link rel="stylesheet" href="{% static 'css/stili_login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}">
     <title>Formulario-Login</title>
 </head>
 
@@ -22,13 +23,13 @@
         <nav class="menu">
 
             <div class="logo">
-                <img id="icono" src="/img/el_ampli_chico.png" alt="Logo">
+                <img id="icono" src="{% static 'img/el_ampli_chico.png' %}" alt="Logo">
             </div>
             <ul>
-                <li><a href="/index.html" style="color:white">INICIO </a></li>
-                <li><a href="/paginas/login.html" style="color:white">REGISTRO</a></li>
-                <li><a href="/paginas/pagina_almacen.html" style="color:white">ALMACEN</a></li>
-                <li><a href="/index.html#bloque_1" style="color:white">NOSOTROS</a></li>
+                <li><a href="{% url 'index' %}" style="color:white">INICIO</a></li>
+                <li><a href="{% url 'login' %}" style="color:white">REGISTRO</a></li>
+                <li><a href="{% url 'almacen' %}" style="color:white">ALMACEN</a></li>
+                <li><a href="{% url 'index' %}" style="color:white">NOSOTROS</a></li>
             </ul>
         </nav>
     </div>
